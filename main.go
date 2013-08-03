@@ -53,7 +53,6 @@ func main() {
 		case o <- tmp:
 			if len(urls) == 0 {
 				o = nil // block
-				log.Println("urls empty, blocking send")
 				continue
 			}
 			tmp = urls[0]
