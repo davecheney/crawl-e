@@ -12,6 +12,7 @@ import (
 
 const workers = 16
 
+// http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know/
 var match = regexp.MustCompile(`(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?`)
 
 func worker(in <-chan string, out chan<- string) {
